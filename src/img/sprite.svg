@@ -1,0 +1,16 @@
+<svg
+  width="0"
+  height="0"
+  class="hidden"
+>
+  <symbol
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 5 5"
+    id="date-arrow"
+  >
+    <path
+      d="M5 2.5L0 5V0L5 2.5Z"
+      fill="currentColor"
+    ></path>
+  </symbol>
+</svg>

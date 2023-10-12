@@ -1,0 +1,30 @@
+
+*
+  box-sizing: inherit
+
+html
+  font-size: max(5px, calc( 5 * 100vw / 320 ))
+  +lg
+    font-size: min(16px, calc( 10 * 100vw / 1024 ))
+
+body
+  box-sizing: border-box
+  min-width: 320px
+  margin: 0
+  font-family: Consolas, sans-serif
+  background-color: $bg-main
+  color: $text
+  font-size: 2.8rem
+  font-weight: 400
+  line-height: 1.5
+  font-style: normal
+  +lg
+    font-size: 1.6rem
+
+.container
+  max-width: 64rem
+  padding: 0 4rem
+  margin: 0 auto
+  +lg
+    max-width: 77rem
+    padding: 0 1.6rem

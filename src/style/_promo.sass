@@ -1,0 +1,55 @@
+.promo
+  padding: 4.4rem 0 4rem
+  background-color: $bg-alt
+  &__container
+    display: flex
+    justify-content: center
+  &__content
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: min-content
+  &__link
+    align-self: flex-start
+    margin-bottom: 17px
+    color: #0035FF
+    font-family: Segoe UI, sans-serif
+    font-size: 14px
+    font-style: normal
+    font-weight: 400
+    line-height: calc( 18 / 14 )
+    text-decoration-line: underline
+    &::before
+      display: inline-block
+      content: 'Реклама на'
+      text-decoration: none
+      color: #000
+      margin-right: 5px
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      opacity: 0
+      transition: .4s
+      background-color: #fff
+      filter: blur(2rem)
+    +hover
+      &::after
+        opacity: .2
+
+  &__img
+    overflow: hidden
+    font-size: 0
+  &__source
+    height: 100%
+    object-fit: contain
+    object-position: center
+
+  +lg
+    padding: 3.4rem 0 3.6rem
+    &__link
+      font-family: Helvetica, sans-serif

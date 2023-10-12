@@ -1,0 +1,55 @@
+.quote
+  padding: 6.8rem 0 11.2rem
+  &__title
+    color: #000
+    font-family: Consolas, sans-serif
+    font-size: 4.6rem
+    font-weight: 700
+    line-height: calc( 36 / 23 )
+    margin: 0 0 4rem
+  &__block
+    position: relative
+    margin: 0
+    padding: 0 0 0 10.6rem
+    font-family: OpenSans, sans-serif
+    font-style: italic
+    line-height: calc( 20 / 14 )
+    &::before
+      content: ''
+      display: block
+      width: 6.8rem
+      height: 6.8rem
+      position: absolute
+      top: -1.6rem
+      left: 0
+      background-image: url(../img/quotation-mark.png)
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+  &__text
+    color: #1A1A1A
+    margin: 0 0 4rem
+  &__author
+    color: #656565
+    margin: 0
+    &::before
+      content: '— '
+
+  +lg
+    padding: 0 0 4.5rem
+    &__title
+      border-top: 0.1rem solid #DCDCDC
+      padding-top: 5.5rem
+      font-size: 2.8rem
+      line-height: calc( 36 / 28 )
+    &__block
+      padding: 0 0 0 5.8rem
+      &::before
+        width: 3.4rem
+        height: 3.4rem
+        top: -0.9rem
+    &__text
+      font-size: 1.8rem
+      line-height: calc( 24 / 18 )
+    &__author
+      color: #777

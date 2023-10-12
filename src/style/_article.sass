@@ -1,0 +1,97 @@
+.article
+  padding: 8rem 0 0
+  &__title
+    display: flex
+    align-items: center
+    margin: 0 0 8rem
+    color: #0062FF
+    text-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.25)
+    font-family: Consolas, sans-serif
+    font-size: 4.6rem
+    font-weight: 700
+    line-height: calc(25 / 23)
+    &-text
+      flex-grow: 1
+      flex-shrink: 0
+      padding: 0 3rem
+    &::before, &::after
+      content: ''
+      width: 100%
+      height: .1rem
+      background-color: #DBDBDB
+  &__content
+    position: relative
+  &__date
+    display: none
+  &__figure
+    display: flex
+    flex-direction: column
+    margin: 0
+  &__img
+    display: block
+    min-height: 300px
+    min-height: 100%
+    object-fit: contain
+    &-wrapp
+      overflow: auto
+      margin: 0
+      padding-bottom: 3.2rem
+      &::-webkit-scrollbar
+        width: 1rem
+        height: 1rem
+        background-color: #E6E6E6
+        border-radius: 1rem
+      &::-webkit-scrollbar-thumb
+        background-color: #0062FF
+        border-radius: 1rem
+        border: 1.2rem solid #0062FF
+  &__caption
+    color: #202326
+    font-family: Arial, sans-serif
+    font-style: italic
+    line-height: calc( 18 / 14 )
+    margin: 0 0 2.6rem
+
+  +lg
+    &__title
+      font-size: 4.8rem
+      margin: 0 0 6.4rem
+      line-height: 1
+      &-text
+        padding: 0 2.8rem
+    &__date
+      display: block
+      position: absolute
+      top: 1.3rem
+      left: 2.0rem
+    &__figure
+      flex-direction: column-reverse
+    &__img
+      min-height: auto
+      height: auto
+      width: 100%
+      &-wrapp
+        overflow: auto
+        padding-bottom: 0
+    &__caption
+      position: relative
+      font-size: 1.4rem
+      padding: 2rem 0 5.7rem
+      margin: 0
+      &-text
+        display: block
+        max-width: 47rem
+        overflow: hidden
+        white-space: nowrap
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 8rem
+        transform: translateY(-100%)
+        width: 0
+        height: 0
+        border: 0 solid transparent
+        border-right-width: .9rem
+        border-left-width: .9rem
+        border-bottom: 1.2rem solid #fff
