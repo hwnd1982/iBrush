@@ -64,13 +64,172 @@
             <h2 class="conclusion__title">Заключение</h2>
             <p class="conclusion__text">
               Синхрония осознаёт сюжетный верлибр. Мифопорождающее текстовое устройство диссонирует лирический субъект.
-              Абстрактное высказывание пространственно просветляет деструктивный символ. Ямб, несмотря на&nbsp;то, что
-              все эти характерологические черты отсылают не&nbsp;к&nbsp;единому образу нарратора, интегрирует
+              Абстрактное высказывание пространственно просветляет деструктивный символ. Ямб, несмотря на то, что все
+              эти характерологические черты отсылают не&nbsp;к&nbsp;единому образу нарратора, интегрирует
               мифопоэтический хронотоп. Действительно, ударение приводит палимпсест. Контрапункт приводит ритм.
             </p>
           </div>
         </section>
       </article>
+      <section class="comment" aria-label="Вы можете оценить статью и оставить комментарий к книге">
+        <div class="container">
+          <form
+            class="form comment__form"
+            action="https://jsonplaceholder.typicode.com/comments"
+            method="post"
+            target="_blank"
+          >
+            <fieldset class="rating comment__rating form__fieldset">
+              <legend class="rating__legend form__legend">Оцените статью</legend>
+              <div class="rating__stars">
+                <input
+                  id="rating-1"
+                  class="rating__input rating__input-1"
+                  type="radio"
+                  name="rating"
+                  value="1"
+                  required
+                />
+                <input
+                  id="rating-2"
+                  class="rating__input rating__input-2"
+                  type="radio"
+                  name="rating"
+                  value="2"
+                  required
+                />
+                <input
+                  id="rating-3"
+                  class="rating__input rating__input-3"
+                  type="radio"
+                  name="rating"
+                  value="3"
+                  required
+                />
+                <input
+                  id="rating-4"
+                  class="rating__input rating__input-4"
+                  type="radio"
+                  name="rating"
+                  value="4"
+                  required
+                />
+                <input
+                  id="rating-5"
+                  class="rating__input rating__input-5"
+                  type="radio"
+                  name="rating"
+                  value="5"
+                  required
+                />
+                <label class="rating__label" for="rating-1" aria-label="1 звездf">
+                  <svg class="rating__star">
+                    <use xlink:href="img/sprite.svg#star" />
+                  </svg>
+                </label>
+                <label class="rating__label" for="rating-2" aria-label="2 звезды">
+                  <svg class="rating__star">
+                    <use xlink:href="img/sprite.svg#star" />
+                  </svg>
+                </label>
+                <label class="rating__label" for="rating-3" aria-label="3 звезды">
+                  <svg class="rating__star">
+                    <use xlink:href="img/sprite.svg#star" />
+                  </svg>
+                </label>
+                <label class="rating__label" for="rating-4" aria-label="4 звезды">
+                  <svg class="rating__star">
+                    <use xlink:href="img/sprite.svg#star" />
+                  </svg>
+                </label>
+                <label class="rating__label" for="rating-5" aria-label="5 звезд">
+                  <svg class="rating__star">
+                    <use xlink:href="img/sprite.svg#star" />
+                  </svg>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset comment__fieldset">
+              <legend class="comment__legend form__legend">Добавить комментарий к книге</legend>
+              <label class="form__input">
+                <input class="form__input-item" type="text" name="name" required placeholder="Имя" />
+                <span class="form__input-placeholder">Имя</span>
+              </label>
+              <label class="form__input">
+                <input class="form__input-item" type="text" name="email" required placeholder="E-mail" />
+                <span class="form__input-placeholder">E-mail</span>
+              </label>
+              <label class="form__input form__input_type_select">
+                <input
+                  class="form__input-item"
+                  type="text"
+                  name="book"
+                  list="books"
+                  readonly
+                  required
+                  placeholder="Выберите книгу"
+                />
+                <svg class="form__input-arrow">
+                  <use xlink:href="img/sprite.svg#select-arrow" />
+                </svg>
+                <span class="form__input-options-wrapp">
+                  <datalist class="form__input-options" id="books">
+                    <option class="form__input-options-item option" value="JavaScript ниндзя">JavaScript ниндзя</option>
+                    <option class="form__input-options-item option" value="Pragmatic Guide to JavaScript">
+                      Pragmatic Guide to JavaScript
+                    </option>
+                    <option class="form__input-options-item option" value="Pro JavaScript Techniques">
+                      Pro JavaScript Techniques
+                    </option>
+                    <option class="form__input-options-item option" value="Выразительный JavaScript">
+                      Выразительный JavaScript
+                    </option>
+                  </datalist>
+                </span>
+              </label>
+              <label class="form__input form__input_type_multiline comment__fullsize-input">
+                <textarea class="form__input-item" rows="6" name="feedback" required placeholder="Имя"></textarea>
+                <span class="form__input-placeholder">Ваш отзыв</span>
+              </label>
+            </fieldset>
+            <button type="submit" class="form__submit">ОТПРАВИТЬ</button>
+          </form>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <h2 class="footer__title">Похожие посты</h2>
+        <nav class="swiper footer__nav nav">
+          <ul class="swiper-wrapper nav__list">
+            <li class="swiper-slide nav__item">
+              <a class="nav__link" href="">
+                <span class="nav__img-wrapp">
+                  <img class="nav__img" src="img/article-react.png" alt="" />
+                </span>
+                <span class="nav__caption">События жизненного цикла ReactJS</span>
+              </a>
+            </li>
+            <li class="swiper-slide nav__item">
+              <a class="nav__link" href="">
+                <span class="nav__img-wrapp">
+                  <img class="nav__img" src="img/article-grid.png" alt="" />
+                </span>
+                <span class="nav__caption">CSS Grids. Полное руководство</span>
+              </a>
+            </li>
+            <li class="swiper-slide nav__item">
+              <a class="nav__link" href="">
+                <span class="nav__img-wrapp">
+                  <img class="nav__img" src="img/article-js.png" alt="" />
+                </span>
+                <span class="nav__caption">Асинхронность в JavaScript</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="swiper-pagination footer__pagination"></div>
+      </div>
+    </footer>
   </body>
 </html>

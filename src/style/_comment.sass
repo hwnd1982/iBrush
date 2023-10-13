@@ -1,0 +1,25 @@
+.comment
+  padding: 7.6rem 0 8rem
+  background-color: $bg-alt
+  &__rating
+    margin-bottom: 4.2rem
+  &__fieldset
+    display: grid
+    gap: 2rem
+    margin-bottom: 2rem
+  &__legend
+    margin-bottom: 1.8rem
+    font-size: 3.2rem
+    line-height: calc( 18 / 16 )
+
+  +lg
+    padding: 3.8rem 0
+    &__fieldset
+      gap: 1.9rem 3rem
+      grid-template-columns: repeat(3, 1fr)
+      &>:last-child
+        grid-column: 1 / -1
+    &__rating
+      margin-bottom: 2.7rem
+    &__legend
+      margin-bottom: 1.6rem

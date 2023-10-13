@@ -1,10 +1,30 @@
 import './index.html';
-import './index.scss';
-import { mult, sum } from './modules/calc';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import './index.sass';
+import Swiper from 'swiper';
+import { Pagination } from 'swiper/modules';
+import { formHandler } from './modules/formHandler';
 
-const imgWrap = document.querySelector('.img');
-const img = new Image();
-img.width = 700;
+formHandler()
 
-console.log(mult(3, 4));
-console.log(sum(3, 4));
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  spaceBetween: 30 * innerWidth / 1024,
+  modules: [Pagination],
+  pagination: {
+    el: ".swiper-pagination",
+    // dynamicBullets: true,
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    }
+  },
+  on: {
+    resize: swiper => {
+      swiper.params.spaceBetween = 30 * innerWidth / 1024;
+    }
+  }
+});

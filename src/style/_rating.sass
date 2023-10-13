@@ -1,0 +1,47 @@
+.rating
+  &__legend
+    margin-bottom: 3rem
+  &__stars
+    display: flex
+  &__input
+    -webkit-appearance: none
+    appearance: none
+  &__star
+    fill: #fff0
+    stroke: #979797
+    transition: .4s
+    width: 5rem
+    height: 5rem
+  &__label
+    font-size: 0
+    &:not(:last-child)
+      margin-right: 2rem
+  &__input-1:checked ~ &__label:first-of-type>&__star,
+  &__input-2:checked ~ &__label:nth-of-type(-n + 2)>&__star,
+  &__input-3:checked ~ &__label:nth-of-type(-n + 3)>&__star,
+  &__input-4:checked ~ &__label:nth-of-type(-n + 4)>&__star,
+  &__input-5:checked ~ &__label:nth-of-type(-n + 5)>&__star
+    fill: #FFB400
+    stroke: #FFB400
+  &__input-1:hover ~ &__label:first-of-type>&__star,
+  &__input-2:hover ~ &__label:nth-of-type(-n + 2)>&__star,
+  &__input-3:hover ~ &__label:nth-of-type(-n + 3)>&__star,
+  &__input-4:hover ~ &__label:nth-of-type(-n + 4)>&__star,
+  &__input-5:hover ~ &__label:nth-of-type(-n + 5)>&__star
+    fill: #FFB400
+    stroke: #fff0
+  &__input-2:checked ~ &__label:nth-of-type(-n + 1):hover>&__star,
+  &__input-3:checked ~ &__label:nth-of-type(-n + 2):hover>&__star,
+  &__input-4:checked ~ &__label:nth-of-type(-n + 3):hover>&__star,
+  &__input-5:checked ~ &__label:nth-of-type(-n + 4):hover>&__star
+    fill: #FFB400
+    stroke: #979797
+  +lg
+    &__legend
+      margin-bottom: 1rem
+    &__star
+      width: 2.5rem
+      height: 2.5rem
+    &__label
+      &:not(:last-child)
+        margin-right: 1rem
