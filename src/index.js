@@ -2,7 +2,6 @@ import './index.html';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './index.sass';
-import './img/sprite.svg';
 import Swiper from 'swiper';
 import { Pagination } from 'swiper/modules';
 import { formHandler } from './modules/formHandler';
