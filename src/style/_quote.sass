@@ -1,35 +1,28 @@
 .quote
-  padding: 6.3rem 0 11.2rem
+  padding: 10rem 0
   &__title
-    color: #000
-    font-size: 4.6rem
-    font-weight: 700
-    line-height: calc( 36 / 23 )
-    margin: 0 0 4.1rem
+    color: $text
+    font-size: 4.4rem
+    font-weight: 500
+    line-height: $lh-30-22
+    margin: 0 0 3.2rem
+    letter-spacing: -0.044rem
   &__block
     position: relative
     margin: 0
-    padding: 0 0 0 10.6rem
-    font-family: OpenSans, sans-serif
-    font-style: italic
-    line-height: calc( 20 / 14 )
-    &::before
-      content: ''
-      display: block
-      width: 6.8rem
-      height: 6.8rem
-      position: absolute
-      top: -1.6rem
-      left: 0
-      background-image: url(../img/quotation-mark.png)
-      background-repeat: no-repeat
-      background-size: cover
-      background-position: center
+  &__marker
+    width: 7.6rem
+    height: 7.6rem
+    margin-bottom: 3.4rem
+    color: $main-blue
   &__text
     color: #1A1A1A
-    margin: 0 0 4.4rem
+    margin: 0 0 2.8rem
   &__author
-    color: #656565
+    color: $text-ui
+    font-size: 3rem
+    line-height: 1.6
+    letter-spacing: 0.03rem
     margin: 0
     &::before
       content: '— '
@@ -37,19 +30,25 @@
   +lg
     padding: 0 0 4.5rem
     &__title
-      border-top: 0.1rem solid #DCDCDC
-      padding-top: 5.3rem
+      border-top: 0.2rem solid #DCDCDC
+      padding-top: 2.5rem
       font-size: 2.8rem
       line-height: calc( 36 / 28 )
+      margin-bottom: 3rem
+
     &__block
       padding: 0 0 0 5.8rem
-      &::before
-        width: 3.4rem
-        height: 3.4rem
-        top: -0.9rem
+    &__marker
+      position: absolute
+      top: 0
+      left: 0
+      width: 3.8rem
+      height: 3.8rem
     &__text
       font-size: 1.8rem
       line-height: calc( 24 / 18 )
       margin: 0 0 2rem
     &__author
-      color: #777
+      font-size: 1.6rem
+      line-height: 1.5
+      letter-spacing: 0.016rem

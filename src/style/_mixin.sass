@@ -5,6 +5,7 @@
 @mixin hover
   @media (hover: hover) and (pointer: fine)
     &:hover
+      transition: .4s
       @content
 
 @function str-replace($string, $search, $replace: "")

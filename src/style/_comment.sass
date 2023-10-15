@@ -1,25 +1,39 @@
 .comment
   padding: 7.6rem 0 8rem
   background-color: $bg-alt
+  &__title
+    max-width: 85%
+    font-size: 5.6rem
+    font-weight: 500
+    line-height: $lh-32-28
+    letter-spacing: -0.028rem
+    margin: 0 0 5.6rem
   &__rating
-    margin-bottom: 4.2rem
+    margin-bottom: 7.2rem
   &__fieldset
     display: grid
-    gap: 2rem
-    margin-bottom: 2rem
+    gap: 2.4rem
+    margin-bottom: 4.4rem
   &__legend
-    margin-bottom: 1.8rem
-    font-size: 3.2rem
-    line-height: calc( 18 / 16 )
+    margin-bottom: 3rem
+    // font-size: 3.2rem
+    // line-height: calc( 18 / 16 )
 
   +lg
     padding: 3.8rem 0
+    &__title
+      max-width: none
+      font-size: 4rem
+      line-height: .9
+      letter-spacing: -0.08rem
+      margin-bottom: 3.7rem
     &__fieldset
-      gap: 1.9rem 3rem
+      gap: 1.2rem
       grid-template-columns: repeat(3, 1fr)
+      margin-bottom: 2.2rem
       &>:last-child
         grid-column: 1 / -1
     &__rating
-      margin-bottom: 2.7rem
+      margin-bottom: .8rem
     &__legend
-      margin-bottom: 1.6rem
+      margin-bottom: 1.5rem

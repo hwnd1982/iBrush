@@ -1,24 +1,14 @@
 .article
-  padding: 7.5rem 0 0
+  padding: 5.6rem 0 0
+  overflow: hidden
   &__title
-    display: flex
-    align-items: center
-    margin: 0 0 8.4rem
-    color: #0062FF
-    text-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.25)
-    font-size: 4.6rem
-    font-weight: 700
-    line-height: calc(25 / 23)
-    &-text
-      flex-grow: 1
-      flex-shrink: 0
-      padding: 0 3rem
-    &::before, &::after
-      content: ''
-      // transform: translateY(-.3rem)
-      width: 100%
-      height: .1rem
-      background-color: #DBDBDB
+    margin: 0 0 2.2rem
+    color: $text
+    font-size: 6.8rem
+    font-weight: 600
+    line-height: $lh-38-34
+    letter-spacing: -.136rem
+
   &__content
     position: relative
   &__date
@@ -27,42 +17,37 @@
     display: flex
     flex-direction: column
     margin: 0
+  &__swiper
+    width: 100%
+    overflow: visible
+    &-wrapper
+      width: max-content
+    & > .swiper-scrollbar
+      height: .5rem
+      background-color: #E6E6E6
+      border-radius: 1rem
+      & >.swiper-scrollbar-drag
+        background-color: $main-blue
+        border-radius: 1rem
+        outline: .2rem solid $main-blue
+        outline-offset: -.1rem
   &__img
     display: block
-    min-height: 300px
-    min-height: 100%
-    object-fit: contain
     &-wrapp
-      overflow: auto
-      margin: 0
       padding-bottom: 2.8rem
-      &::-webkit-scrollbar
-        width: 1rem
-        height: 1rem
-        background-color: #E6E6E6
-        border-radius: 1rem
-      &::-webkit-scrollbar-thumb
-        background-color: #0062FF
-        border-radius: 1rem
-        border: 1.2rem solid #0062FF
   &__caption
     color: #202326
-    font-family: Arial, sans-serif
-    font-style: italic
-    line-height: calc( 18 / 14 )
+    line-height: $lh-20-14
     margin: 0 0 5.2rem
 
   +lg
-    padding: 7.6rem 0 0
+    padding: 11.9rem 0 0
     &__title
-      font-size: 4.8rem
-      margin: 0 0 6.8rem
-      line-height: 1
-      &::before, &::after
-        transform: translateY(-.3rem)
-
-      &-text
-        padding: 0 2.8rem
+      margin: 0 0 3.7rem
+      line-height: $lh-48-52
+      font-size: 5.2rem
+      font-weight: 600
+      letter-spacing: -.104rem
     &__date
       display: block
       position: absolute
@@ -70,32 +55,34 @@
       left: 2.0rem
     &__figure
       flex-direction: column-reverse
+    &__swiper
+      &-wrapper
+        width: 100%
     &__img
-      min-height: auto
+      max-width: 100%
       height: auto
-      width: 100%
       &-wrapp
-        overflow: auto
         padding-bottom: 0
     &__caption
       position: relative
       font-size: 1.4rem
-      padding: 2rem 0 5rem
+      padding: 2rem 0 8rem
       margin: 0
+      z-index: 2
       &-text
         display: block
-        max-width: 47rem
+        max-width: 48rem
         overflow: hidden
         white-space: nowrap
       &::after
         content: ''
         position: absolute
         top: 0
-        left: 8rem
+        left: 7.7rem
         transform: translateY(-100%)
         width: 0
         height: 0
         border: 0 solid transparent
-        border-right-width: .6rem
-        border-left-width: .6rem
-        border-bottom: 1rem solid #fff
+        border-right-width: 0.9rem
+        border-left-width: 0.9rem
+        border-bottom: 1.3rem solid #fff

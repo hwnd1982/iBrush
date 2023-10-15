@@ -1,19 +1,34 @@
 import './index.html';
 import 'swiper/css';
+import 'swiper/css/scrollbar';
 import 'swiper/css/pagination';
 import './index.sass';
 import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Scrollbar, Mousewheel, FreeMode } from 'swiper/modules';
 import { formHandler } from './modules/formHandler';
+import { headerMenuHandler } from './modules/headerMenuHandler';
+import { overlayClickHandler } from './modules/overlayClickHandler';
 
-formHandler()
+overlayClickHandler();
+formHandler();
+headerMenuHandler();
 
-const swiper = new Swiper('.swiper', {
+new Swiper('.article-swiper', {
+  slidesPerView: 'auto',
+  freeMode: true,
+  modules: [Scrollbar, Mousewheel, FreeMode],
+  scrollbar: {
+    el: ".article-scrollbar",
+  },
+  mousewheel: true,
+});
+
+new Swiper('.footer-swiper', {
   slidesPerView: 1,
   spaceBetween: 30 * innerWidth / 1024,
   modules: [Pagination],
   pagination: {
-    el: ".swiper-pagination",
+    el: ".footer-swiper-pagination",
     clickable: true,
   },
   breakpoints: {

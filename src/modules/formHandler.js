@@ -4,16 +4,18 @@ export const formHandler = (selector = '.form') => {
 
   if (!form) return;
 
-  document.addEventListener('click', ({target}) => {
-    const formTarget = target.closest('.form');
-
-    if (!formTarget) {
-      form.querySelectorAll('._opened').forEach(item => item.classList.remove('_opened'));
-    }
-  })
+  const ratingCount = form.querySelector('.rating__count');
+  const openedItems = form.getElementsByClassName('_opened');
+  const selectedItems = form.getElementsByClassName('_selected');
 
   form.addEventListener('change', ({target}) => {
     const input = target.closest('[name="name"], [name="email"], [name="feedback"]');
+    const rating = target.closest('[name="rating"]')
+
+    if (rating) {
+      ratingCount.textContent = rating.value;
+      return;
+    }
 
     if (input) {
       input.parentElement.classList[input.value ? 'add' : 'remove']('_filled');
@@ -22,24 +24,31 @@ export const formHandler = (selector = '.form') => {
   });
 
   form.addEventListener('click', ({target}) => {
+    const [opened] = openedItems;
+    const [selected] = selectedItems;
     const select = target.closest('[name="book"]');
     const item = target.closest('.option');
     
-    if (select) {
-      select.parentElement.classList.toggle('_opened');
+    if (opened) {
+      opened.classList.remove('_opened');
+    }
+
+    if (select && select !== opened) {
+      select.classList.add('_opened');
       return;
     }
 
     if (item) {
-      const input = item.closest('.form__input');
-      const select = input.querySelector('[name="book"]');
-      const selectedItems = input.querySelectorAll('._selected');
-
-      if(selectedItems.length) {
-        selectedItems.forEach(item => item.classList.remove('_selected'));
+      const select = target.closest('.form__input').firstElementChild;
+      
+      if (selected && item !== selected) {
+        selected.classList.remove('_selected');
       }
 
-      item.classList.add('_selected');
+      if (item !== selected) {
+        item.classList.add('_selected');
+      }
+
       select.value = item.value;
     }
   });

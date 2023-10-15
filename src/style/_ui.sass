@@ -1,0 +1,51 @@
+.button
+  padding: 2rem 4rem 2.4rem
+  color: $text-btn
+  font-size: 2.8rem
+  font-weight: 500
+  line-height: $lh-18-14
+  border-radius: 10rem
+  background-color: $main-blue
+  border: none
+  +lg
+    padding: 1rem 2rem 1.2rem
+    font-size: 1.4rem
+
+.nav-item
+  display: block
+  color: $text
+  font-size: 3rem
+  font-weight: 500
+  line-height: $lh-18-15
+  +hover
+    color: $main-blue
+  +lg
+    font-size: 1.5rem
+
+.mobile-menu-button
+  position: relative
+  display: block
+  width: 4rem
+  height: 2.8rem
+  padding: 0
+  border: none
+  background-color: $tran
+  &__line
+    position: absolute
+    left: 0
+    right: 0
+    border: .2rem solid $text
+    background-color: $text
+    transition: .4s
+    &_pos
+      &_top
+        top: 0
+        ._show &
+          transform: translateY(.75rem) rotate(135deg)
+      &_middle
+        top: 50%
+        ._show &
+          transform: translateY(-.75rem) rotate(-135deg)
+
+  +lg
+    display: none

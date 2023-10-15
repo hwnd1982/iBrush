@@ -1,5 +1,5 @@
 .promo
-  padding: 4.6rem 0 4rem
+  padding: 12rem 0 14.6rem
   background-color: $bg-alt
   &__container
     display: flex
@@ -12,17 +12,16 @@
     width: min-content
   &__link
     align-self: flex-start
-    margin-bottom: 13px
-    color: #0035FF
-    font-family: Segoe UI, sans-serif
-    font-size: 14px
-    line-height: calc( 18 / 14 )
     text-decoration-line: underline
+    color: $main-blue
+    font-size: 12px
+    font-weight: 500
+    line-height: 1.5
     &::before
       display: inline-block
       content: 'Реклама на'
       text-decoration: none
-      color: #000
+      color: $text
       margin-right: 5px
     &::after
       content: ''
@@ -42,6 +41,7 @@
   &__img
     overflow: hidden
     font-size: 0
+    margin-bottom: 13px
   &__source
     height: 100%
     object-fit: contain
@@ -50,5 +50,4 @@
   +lg
     padding: 3.4rem 0 3.6rem
     &__link
-      font-family: Helvetica, sans-serif
       margin-bottom: 16px
