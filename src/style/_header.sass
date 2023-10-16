@@ -1,6 +1,6 @@
 .header
   position: relative
-  padding: 3.6rem 0
+  padding: 2.6rem 0
   z-index: 10
   &::after
     content: ''
@@ -24,7 +24,7 @@
     position: absolute
     display: flex
     flex-direction: column
-    bottom: -3.6rem
+    bottom: -2.6rem
     left: 0
     right: 0
     z-index: -1
@@ -32,8 +32,21 @@
     padding: 0 4rem
     background-color: $bg-main
     padding-bottom: 6rem
+
+    padding-top: 5rem
+    box-shadow: 0 2rem 2rem -1rem rgb(0 0 0 / 15%) inset
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: -1
     ._show + &
       transform: translateY(100%)
+      &::after
+        box-shadow: 0 2rem 2rem 1rem rgb(0 0 0 / 15%)
   &__menu
     display: flex
     padding: 0
@@ -66,9 +79,11 @@
       position: relative
   &__list
     display: block
-    padding: 0 0 0 2rem
+    padding: 2rem 0 0 2rem
     margin: 0
     list-style: none
+    &>:not(:last-child)
+      margin-bottom: 2.8rem
     &-wrapp
       height: 0
       overflow: hidden
@@ -78,6 +93,7 @@
         height: auto
 
     &-link
+      display: block
       color: $text
       font-size: 2.6rem
       line-height: 1
@@ -106,6 +122,10 @@
       z-index: 5
       flex-grow: 1
       transition: 0s
+      padding-top: 0
+      box-shadow: none
+      &::after
+        content: none
       ._show + &
         transform: translateY(0)
     &__menu
@@ -127,8 +147,10 @@
       padding: 1.4rem 2.6rem 1.7rem 1.5rem
       border-radius: 1.2rem
       background-color: #fff
+      &>:not(:last-child)
+        margin-bottom: 1.4rem
       &-wrapp
-        bottom: -2rem
+        bottom: -1rem
         box-shadow: 0 1.8rem 6rem 0 rgb(0 0 0 / 5%)
         position: absolute
         left: 0
