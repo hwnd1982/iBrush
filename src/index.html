@@ -150,6 +150,7 @@
           <h2 class="comment__title">Что вы думаете об этой книге?</h2>
           <form
             class="form comment__form"
+            name="comment"
             action="https://jsonplaceholder.typicode.com/comments"
             method="post"
             target="_blank"
@@ -310,6 +311,41 @@
         <div class="swiper-pagination footer-swiper-pagination footer__pagination"></div>
       </div>
     </footer>
+    <div class="overlay">
+      <div class="modal">
+        <p class="modal__title">Начать учиться</p>
+        <p class="modal__message">Оставьте заявку и наш менеджер вам&nbsp;перезвонит.</p>
+        <button type="button" class="modal__close" aria-label="Кнопка: Закрыть модальное окно">
+          <svg class="modal__close-icon">
+            <use xlink:href="#close-icon" />
+          </svg>
+        </button>
+        <form
+          name="modal"
+          action="https://jsonplaceholder.typicode.com/comments"
+          method="post"
+          target="_blank"
+          class="form modal__form"
+          method="post"
+        >
+          <fieldset class="form__fieldset modal__fieldset">
+            <label class="form__input">
+              <input class="form__input-item" type="text" name="name" required placeholder="Имя" />
+              <span class="form__input-placeholder">Как вас зовут</span>
+            </label>
+            <label class="form__input">
+              <input class="form__input-item" type="text" name="email" required placeholder="E-mail" />
+              <span class="form__input-placeholder">Ваш email</span>
+            </label>
+          </fieldset>
+          <button type="submit" class="button form__submit modal__submit">Отправить</button>
+          <p class="modal__notice">
+            Нажимая кнопку «Отправить», вы соглашаетесь с
+            <a href="#" class="modal__notice-link">политикой конфиденциальности</a>
+          </p>
+        </form>
+      </div>
+    </div>
     <svg width="0" height="0" class="hidden">
       <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 14" id="logo">
         <path
@@ -389,6 +425,14 @@
         stroke="currentColor"
       >
         <path d="M1 1L5.5 5L10 1" stroke="#curentColor" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" fill="none" id="close-icon">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M9.58579 11L4.63604 15.9498L6.05025 17.364L11 12.4142L15.9497 17.364L17.364 15.9498L12.4142 11L17.364 6.05026L15.9497 4.63604L11 9.58579L6.05025 4.63604L4.63604 6.05026L9.58579 11Z"
+          fill="#202326"
+        />
       </symbol>
     </svg>
   </body>

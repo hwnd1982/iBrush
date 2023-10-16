@@ -21,6 +21,11 @@ new Swiper('.article-swiper', {
     el: ".article-scrollbar",
   },
   mousewheel: true,
+  breakpoints: {
+    768: {
+      enabled: false,
+    }
+  }
 });
 
 new Swiper('.footer-swiper', {
@@ -34,6 +39,7 @@ new Swiper('.footer-swiper', {
   breakpoints: {
     768: {
       slidesPerView: 3,
+      enabled: false,
     }
   },
   on: {

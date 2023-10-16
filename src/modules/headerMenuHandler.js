@@ -1,4 +1,4 @@
-import { setBreakpiont } from "./util";
+import { ModalHandler } from "./overlayClickHandler";
 
 export const headerMenuHandler = (selector = '.header') => {
   const header = typeof selector === 'string' ?
@@ -7,20 +7,26 @@ export const headerMenuHandler = (selector = '.header') => {
   if (!header) return;
 
   const openedItems = header.getElementsByClassName('_opened');
-  const openedMenu = header.getElementsByClassName('_show');
+  const menu = header.querySelector('.mobile-menu-button');
 
   header.addEventListener('click', ({target}) => {
     const [opened] = openedItems;
     const button = target.closest('.header__menu-button');
     // const link = target.closest('.header__menu-button');
-    const mobileMunu = target.closest('.mobile-menu-button');
+    const modalButton = target.closest('.header__start-studying');
+    const mobileMenu = target.closest('.mobile-menu-button');
 
-    if (mobileMunu) {
-      mobileMunu.classList.toggle('_show')
+    if (mobileMenu) {
+      mobileMenu.classList.toggle('_show')
     }
 
-    if (opened && innerWidth > 768) {
+    if (opened && (innerWidth > 768 || modalButton)) {
       opened.classList.remove('_opened');
+    }
+
+    if (modalButton) {
+      new ModalHandler().open()
+      menu.classList.remove('_show')
     }
 
     if (button && (innerWidth <= 768 || button !== opened)) {
@@ -28,20 +34,4 @@ export const headerMenuHandler = (selector = '.header') => {
       return;
     }
   });
-
-  const isBreakpiont = setBreakpiont(768);
-
-  window.addEventListener('resize', () => {
-    if (isBreakpiont()) {
-      const [menu] = openedMenu;
-
-      if (menu) {
-        menu.classList.remove('_show');
-      }
-
-      [...openedItems].forEach(item => item.classList.remove('_opened'));
-    }
-  });
-
-
 };
